@@ -15,9 +15,36 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showForm()
 	{
-		return View::make('hello');
+		return View::make('index');
+	}
+
+	public function postForm() {
+
+
+		$rules =  $rules = array(
+			'fname' => 'required',
+			'lname' => 'required',
+			'email' => 'required|email'
+		);
+
+	    $validator = Validator::make(Input::all(), $rules);
+	    $messages = $validator->messages();
+	 
+	    if ($validator->fails())
+	    {
+	    	//Fail - Return errors and user posted input values (to re-populate form)
+	        return Redirect::to('/')->withErrors($validator, $messages)->withInput();;
+	    } 
+	   
+	    else
+	    {
+	    	 //Pass
+	        return Redirect::to('/')->with("thanks", "true");
+	    } 
+
+
 	}
 
 }

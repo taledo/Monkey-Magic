@@ -41,9 +41,9 @@
         {{-- Global navigation --}}
         @include('partials.nav')
 
-        <div id="wrap">
+        <section id="main">
             @yield('body')
-        </div><!-- #wrap -->
+        </section><!-- #wrap -->
 
         @include('partials.footer')
 

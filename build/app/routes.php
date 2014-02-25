@@ -11,9 +11,17 @@
 |
 */
 
-Route::get('/', function()
+//Get 
+Route::get('/', 'HomeController@showForm');
+
+//Post
+Route::post('/', 'HomeController@postForm');
+
+
+//CSRF Security
+Route::filter('csrf', function()
 {
-	return View::make('index');
+    if (Request::forged()) return Response::error('500');
 });
 
 
