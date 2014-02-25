@@ -25,23 +25,39 @@ class HomeController extends BaseController {
 
 		$rules =  $rules = array(
 			'fname' => 'required',
-			'lname' => 'required',
-			'email' => 'required|email'
+			'sname' => 'required',
+			'email' => 'required|email',
+			'phone' => 'required|numeric',
+			'address' => 'required',
+			'suburb' => 'required',
+			'state' => 'required',
+			'postcode' => 'required',
+			'subject' => 'required',
+			//Conditionally required
+			'pname' => 'required_if:subject,Complaint',
+			'psize' => 'required_if:subject,Complaint',
+			'useby' => 'required_if:subject,Complaint',
+			'batch' => 'required_if:subject,Complaint'
 		);
 
+		// $messages = $messages = array(
+		// 	'pname.required_if'=>'Please tell us the product name for this complaint'
+		// );
+
 	    $validator = Validator::make(Input::all(), $rules);
-	    $messages = $validator->messages();
+	    //$messages = $validator->messages();
 	 
 	    if ($validator->fails())
 	    {
 	    	//Fail - Return errors and user posted input values (to re-populate form)
-	        return Redirect::to('/')->withErrors($validator, $messages)->withInput();;
+	        return Redirect::to('/')->withErrors($validator, $messages)->withInput();
 	    } 
 	   
 	    else
 	    {
 	    	 //Pass
 	        return Redirect::to('/')->with("thanks", "true");
+	        //TODO: Hook up to a model for some DB love
 	    } 
 
 
