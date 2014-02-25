@@ -12,7 +12,7 @@
 
 
 
-         <?php 
+        <?php 
             // variable is set in HomeController@postForm
             if (Session::has('thanks')) {
                 echo '<div class="thanks"><p>Thanks for submitting this form!</p>We will get back to you shortly.</div>';
@@ -78,6 +78,6 @@
         </fieldset>
 
         {{ Form::token() . Form::close() }}
-
+@stop
 
 
