@@ -27,7 +27,6 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="{{ Bust::url('/css/normalize.min.css') }}">
         <link rel="stylesheet" href="{{ Bust::url('/css/main.css') }}">
         <script src="{{ Bust::url('/js/vendor/modernizr-2.6.2.min.js') }}"></script>
     

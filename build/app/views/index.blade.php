@@ -72,7 +72,7 @@
             {{ Form::label('useby', 'Use-by date') . Form::text('useby', Input::old('useby') ) }}
             {{ Form::label('batch', 'Batch code') . Form::text('batch', Input::old('batch') ) }}
             {{ Form::label('enquiry', 'Enquiry') . Form::textarea('enquiry', Input::old('enquiry') ) }}
-            {{ Form::submit('Submit', array('class' => 'btn')) }}
+            {{ Form::submit('Submit &gt;', array('class' => 'btn')) }}
 
         </fieldset>
 

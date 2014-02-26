@@ -5,3 +5,146 @@
 @import "common";
 
 /* subpages */
+
+body {
+    font-family:Trebuchet MS, 'Trebuchet MS', Arial;
+    background-color:#f9f9f9;
+    padding-top:40px;
+    color:#666;
+
+    #main {
+	    width:650px;
+	    margin:0 auto;
+	    padding:0 0 50px 0;
+
+	    /* Notices */
+		.errors,
+		.thanks {
+		    width: 390px;
+		    padding:15px;
+		    float:right;
+		    clear: both;
+		    margin:0 0 30px;
+		    text-align: left;
+		    font-weight: bold;
+		    border-radius:5px;
+		    -moz-border-radius:5px;
+		    -webkit-border-radius:5px;
+		}
+
+		.errors {  
+		    color:red;
+		    list-style-type: square;
+		    list-style-position: inside;
+		    background-color:rgba(188,42,42,0.15);
+		    font-size:12px;
+
+		    li {
+		    	padding:3px 0;
+		    }
+		}
+
+		.thanks { 
+		    color: green;
+		    background-color:rgba(44,162,13,0.15);
+		}
+
+		/* Form */
+		form { 
+			clear: both;
+
+			fieldset {
+				padding-bottom: 50px;
+				clear: both;
+			}
+
+			input,
+			textarea,
+			select,
+			label {
+				display: block;
+			    float:right;
+			    font-size:14px;
+			    padding:12px 0;
+			}
+
+			input,
+			textarea,
+			select {
+				width:400px;
+			    font-family: Trebuchet MS, 'Trebuchet MS', Arial;
+			    margin:0 0 12px 0;
+			}
+
+			input,
+			textarea {
+				background-color:#f6f5f3;
+			    border-radius:5px;
+			    -moz-border-radius:5px;
+			    -webkit-border-radius:5px;
+			    -moz-box-shadow: inset 1px 3px 4px #ccc;
+			    -webkit-box-shadow: inset 1px 2px 4px #ccc;
+			    box-shadow: inset 1px 3px 4px #ccc;
+			    border:1px solid #eee;
+			    padding:10px;
+			}
+
+			select {
+				padding:0; 
+				width:420px;
+				margin-top:10px;
+			}
+
+			input {
+
+				&.btn {
+					float:right;
+					width:100px;
+					background: #1575a8; /* Old browsers */
+					/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+					background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiMxNTc1YTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGU1YTdhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+					background: -moz-linear-gradient(top,  #1575a8 49%, #0e5a7a 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(49%,#1575a8), color-stop(100%,#0e5a7a)); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top,  #1575a8 49%,#0e5a7a 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top,  #1575a8 49%,#0e5a7a 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top,  #1575a8 49%,#0e5a7a 100%); /* IE10+ */
+					background: linear-gradient(to bottom,  #1575a8 49%,#0e5a7a 100%); /* W3C */
+					border:none;
+
+					color:#fff;
+					box-shadow: none;
+					padding:10px;
+					clear: both;
+					text-transform: uppercase;
+					cursor: pointer;
+					opacity:1;
+					-webkit-transition:all 0.2s linear;
+				    -moz-transition:all 0.2s linear;
+				    -o-transition:all 0.2s linear;
+				    transition:all 0.2s linear;
+
+					&:hover {
+						-webkit-transform:scale(1.05);
+					    -moz-transform:scale(1.05);
+					    -ms-transform:scale(1.05);
+					    -o-transform:scale(1.05);
+					    transform:scale(1.05);
+					}
+				}
+			}
+
+			label {
+				float:left;
+			    clear:left;
+			    width:180px;
+			    text-align:right;
+			    margin-bottom:12px;
+			}
+		}
+
+	}
+
+}
+
+
+
