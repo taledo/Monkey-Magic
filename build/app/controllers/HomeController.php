@@ -40,11 +40,19 @@ class HomeController extends BaseController {
 			'batch' => 'required_if:subject,Complaint'
 		);
 
-		// $messages = $messages = array(
-		// 	'pname.required_if'=>'Please tell us the product name for this complaint'
-		// );
+		//Custom messages (a little more user-friendly)
+		$messages = array(
+		    'required' => 'The :attribute field is required.',
+		    'email' => 'Please enter a valid email address',
+		    'phone.numeric' => 'Please enter a valid phone number',
+		    'postcode.numeric' => 'Please enter a valid postcode',
+		    'pname.required_if' => 'The Product name is required because you have chosen Product Complaint',
+		    'psize.required_if' => 'The Product size is required because you have chosen Product Complaint',
+		    'useby.required_if' => 'The Use-by date is required because you have chosen Product Complaint',
+		    'batch.required_if' => 'The Batch code is required because you have chosen Product Complaint'
+		);
 
-	    $validator = Validator::make(Input::all(), $rules);
+	    $validator = Validator::make(Input::all(), $rules, $messages);
 	    //$messages = $validator->messages();
 	 
 	    if ($validator->fails())
