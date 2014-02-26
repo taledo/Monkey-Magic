@@ -1,14 +1,18 @@
 Monkey Magic
 =======================
 
-The best project ever.
+Whilst Monkey Magic was a project that aired in the 90s that many kids grew up with, there is no direct correlation to this project.
 
-Your project summary here
+This project consists of a feedback form, with validation and some conditional logic.
 
 Documentation
 -------------
 
-Your project-specific documentation here
+This project uses laravel. All project files can be found in
+/build
+
+There is no database connection for this application.
+
 
 Requirements
 ------------

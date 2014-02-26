@@ -1,7 +1,7 @@
 @extends('layouts.common')
 
 @section('title')
-	Monkey Business
+	Monkey Magic
 @stop
 
 @section('body-class')
