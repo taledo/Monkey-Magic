@@ -16,7 +16,6 @@ body {
 	    width:650px;
 	    margin:0 auto;
 	    padding:0 0 50px 0;
-
 	    /* Notices */
 		.errors,
 		.thanks {
@@ -145,6 +144,49 @@ body {
 	}
 
 }
+
+
+
+/* MOBILE */
+@media only screen and (max-width:$break-tablet-min-width) {
+
+	body {
+		#main { 
+	        width: 90%;
+			margin: 0 auto;
+
+			form {
+
+		    	fieldset {
+
+		    		label,
+			    	input,
+			    	select,
+			    	textarea {
+						width:95%;
+						float:none;
+						clear: both;
+						text-align:left;
+						margin:0;
+			    	}
+
+			    	input {
+			    		&.btn {
+			    			float:none;
+			    			margin-top:15px
+			    		}
+			    	}
+
+		    	}
+	    	
+	    	}
+
+	    }
+	}
+
+}
+
+
 
 
 
