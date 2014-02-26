@@ -31,7 +31,7 @@ class HomeController extends BaseController {
 			'address' => 'required',
 			'suburb' => 'required',
 			'state' => 'required',
-			'postcode' => 'required',
+			'postcode' => 'required|numeric',
 			'subject' => 'required',
 			//Conditionally required
 			'pname' => 'required_if:subject,Complaint',

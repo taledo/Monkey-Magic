@@ -11,7 +11,6 @@
 @section('body')
 
 
-
         <?php 
             // variable is set in HomeController@postForm
             if (Session::has('thanks')) {
@@ -19,10 +18,9 @@
             }
         ?>
 
-
         <?php //Any errors? ?>
         @if($errors->any())
-          <ul class="errors">
+          <ul class="errors" id="errors">
               @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
               @endforeach
