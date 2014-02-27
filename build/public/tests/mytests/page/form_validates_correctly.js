@@ -21,6 +21,7 @@ registerTest ('Form Tests', {
 
         self
 
+        //Test for empty fields
         .waitForPageLoadAfter(function($) {
             //Go
             $(this.formElement).submit();
@@ -30,7 +31,7 @@ registerTest ('Form Tests', {
             equal($(this.errorsDiv).length, 1, this.tests[0].message);
         })
 
-        //Technically the following isn't necessary, as the Laravel validation is very strict and takes care of all the conditionals
+        //Test for conditional fields "Product Complaint"
         .waitForPageLoadAfter(function($) {
             $( "input[required*='required']" ).val( "1" ); //Will also satisfy some numeric validation
             $( "input#email" ).val( "a@b.c" );
